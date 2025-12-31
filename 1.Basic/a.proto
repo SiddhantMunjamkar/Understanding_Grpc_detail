@@ -6,12 +6,7 @@ message Person {
   int32 age = 2;
 }
 
-
-message GetPersonByNameRequest {
-  string name = 1;
-}
-
-service PersonService {
+service AddressBookService {
   // Add a person to the address book.
   rpc AddPerson(Person) returns (Person);
   
@@ -19,3 +14,6 @@ service PersonService {
   rpc GetPersonByName(GetPersonByNameRequest) returns (Person);
 }
 
+message GetPersonByNameRequest {
+  string name = 1;
+}
