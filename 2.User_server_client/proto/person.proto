@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package person;
+
+
+service PersonService {
+  rpc AddPerson(User) returns (User);
+  rpc GetPerson(Empty) returns (Personlist);
+}
+
+message Personlist {
+  repeated User persons = 1;
+}
+
+message User {
+  string name = 1;
+  int32 age = 2;
+
+}
+
+
+message Empty {}
