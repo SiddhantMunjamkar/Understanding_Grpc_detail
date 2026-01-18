@@ -8,6 +8,8 @@ const packageDefinition = protoLoader.loadSync(
   path.join(__dirname, "../proto/person.proto")
 );
 
+
+
 const personProto = grpc.loadPackageDefinition(
   packageDefinition
 ) as unknown as GrpcObject;
