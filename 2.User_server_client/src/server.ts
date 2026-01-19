@@ -14,6 +14,7 @@ const personProto = grpc.loadPackageDefinition(
   packageDefinition
 ) as unknown as GrpcObject;
 
+
 function AddPerson(
   call: grpc.ServerUnaryCall<any, any>,
   callback: grpc.sendUnaryData<any>
