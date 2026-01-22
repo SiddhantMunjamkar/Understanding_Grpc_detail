@@ -15,6 +15,8 @@ const personProto = grpc.loadPackageDefinition(
 ) as unknown as GrpcObject;
 
 
+
+
 function AddPerson(
   call: grpc.ServerUnaryCall<any, any>,
   callback: grpc.sendUnaryData<any>
@@ -39,10 +41,6 @@ server.addService(
     GetPerson,
   }
 );
-
-
-
-
 
 server.bindAsync(
   "0.0.0.0:50051",
